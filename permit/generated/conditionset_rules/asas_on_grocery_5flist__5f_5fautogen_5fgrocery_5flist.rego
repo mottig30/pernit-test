@@ -1,0 +1,15 @@
+package permit.generated.conditionset.rules
+
+import future.keywords.in
+
+import data.permit.generated.abac.utils.attributes
+import data.permit.generated.abac.utils.condition_set_permissions
+import data.permit.generated.conditionset
+
+default asas_5fon_5fgrocery_5f5flist_5f_5f5f_5f5fautogen_5f5fgrocery_5f5flist = false
+
+asas_5fon_5fgrocery_5f5flist_5f_5f5f_5f5fautogen_5f5fgrocery_5f5flist {
+	conditionset.userset_asas
+	conditionset.resourceset__5f_5fautogen_5fgrocery_5flist
+	input.action in condition_set_permissions.asas.__autogen_grocery_list[input.resource.type]
+}
